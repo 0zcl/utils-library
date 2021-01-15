@@ -4,6 +4,7 @@ import getBrowserInfo from './browser/getBrowserInfo'
 import setCookie from './browser/setCookie'
 import removeCookie from './browser/removeCookie'
 import getCookie from './browser/getCookie'
+import hasOwnProp from './object/hasOwnProp'
 
 export default {
   randomColor,
@@ -11,5 +12,6 @@ export default {
   getBrowserInfo,
   setCookie,
   removeCookie,
-  getCookie
+  getCookie,
+  hasOwnProp
 }
