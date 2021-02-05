@@ -17,7 +17,7 @@ new Vue({
   render: h => h(App)
 }).$mount('#app')
 
-console.log(utilsLibrary)
+console.log('utilsLibrary', utilsLibrary)
 console.log(utilsLibrary.randomColor())
 console.log(utilsLibrary.randomNum(2, 6))
 console.log(utilsLibrary.getBrowserInfo())

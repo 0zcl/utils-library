@@ -3,7 +3,7 @@
     <div class="aside">
       <div class="header">
         <h1 class="title">
-          <a href="https://github.com/xuliangzhan/xe-utils">xe-utils</a>
+          <a href="https://github.com/0zcl/utils-library">xe-utils</a>
         </h1>
       </div>
     </div>
@@ -21,6 +21,8 @@
 
 <script lang="ts">
 import { Vue, Component, Prop } from 'vue-property-decorator'
+
+@Component
 export default class API extends Vue {
   mounted() {
     console.log('mounted')

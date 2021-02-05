@@ -1,9 +1,4 @@
 
-// /**
-//  *
-//  * @desc 获取浏览器类型和版本
-//  * @return {String}
-//  */
 function getOS() {
   const userAgent: string = ('navigator' in window && 'userAgent' in navigator && navigator.userAgent.toLowerCase()) || ''
   const appVersion = ('navigator' in window && 'appVersion' in navigator && navigator.appVersion.toLowerCase()) || ''
@@ -16,9 +11,17 @@ function getOS() {
 }
 
 interface BrowserInfo {
-    type: 'ios' | 'android' | 'windowsPhone' | 'MacOSX' | 'windows' | 'linux' | undefined
+  /** 浏览器类型 */
+  type: 'ios' | 'android' | 'windowsPhone' | 'MacOSX' | 'windows' | 'linux' | undefined
 }
 
+/**
+ * ```typescript
+ * utilsLibrary.getBrowserInfo() // {type: "windows"}
+ * ```
+ * @desc 获取浏览器类型
+ * @return {BrowserInfo} 类型为{ type: 'xxx' }
+ */
 function getBrowserInfo(): BrowserInfo {
   const os: BrowserInfo = {} as BrowserInfo
   os.type = getOS()

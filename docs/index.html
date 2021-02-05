@@ -50,7 +50,7 @@
 	</div>
 	<div class="tsd-page-title">
 		<div class="container">
-			<h1>Project utils-library</h1>
+			<h1>utils-library</h1>
 		</div>
 	</div>
 </header>
@@ -58,6 +58,12 @@
 	<div class="row">
 		<div class="col-8 col-content">
 			<div class="tsd-panel tsd-typography">
+				<p>待开发：
+					1、src/index.ts 每次加新接口，都import 新接口。解决：自动导入
+				已解决：通过webpack的api: require.context. 需要先安装声明包：@types/webpack-env</p>
+				<p>2、doc说明文档 美化生成？
+				已解决：typedoc</p>
+				<p>3、推包</p>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -66,13 +72,31 @@
 					<li class=" ">
 						<a href="modules.html">Exports</a>
 					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/browser_getbrowserinfo.html">browser/get<wbr>Browser<wbr>Info</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/browser_getcookie.html">browser/get<wbr>Cookie</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/browser_removecookie.html">browser/remove<wbr>Cookie</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/browser_setcookie.html">browser/set<wbr>Cookie</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/object_hasownprop.html">object/has<wbr>Own<wbr>Prop</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/random_randomcolor.html">random/random<wbr>Color</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/random_randomnum.html">random/random<wbr>Num</a>
+					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-property">
-						<a href="modules.html#default" class="tsd-kind-icon">default</a>
-					</li>
 				</ul>
 			</nav>
 		</div>
@@ -82,6 +106,9 @@
 	<div class="container">
 		<h2>Legend</h2>
 		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+			</ul>
 		</div>
 	</div>
 </footer>

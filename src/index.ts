@@ -1,17 +1,16 @@
-import randomColor from './random/randomColor'
-import randomNum from './random/randomNum'
-import getBrowserInfo from './browser/getBrowserInfo'
-import setCookie from './browser/setCookie'
-import removeCookie from './browser/removeCookie'
-import getCookie from './browser/getCookie'
-import hasOwnProp from './object/hasOwnProp'
-
-export default {
-  randomColor,
-  randomNum,
-  getBrowserInfo,
-  setCookie,
-  removeCookie,
-  getCookie,
-  hasOwnProp
+interface Cache {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  [index: string]: any
 }
+const cache: Cache = {} as Cache
+
+function importAll (r: __WebpackModuleApi.RequireContext): void {
+  r.keys().forEach((key: string) => {
+    if (key === './index.ts') return
+    cache[r(key).default.name] = r(key).default
+  })
+}
+
+importAll(require.context('./', true, /\.ts$/))
+
+export default cache
