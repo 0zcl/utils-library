@@ -1,6 +1,6 @@
 {
   "name": "@i61/utils-library",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "公共函数库",
   "main": "./dist/utils-library.js",
   "types": "./types/utils-library.d.ts",
