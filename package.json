@@ -5,8 +5,8 @@
   "main": "./dist/utils-library.js",
   "types": "./types/utils-library.d.ts",
   "files": [
-    "./dist/utils-library.js",
-    "./types/utils-library.d.ts"
+    "dist",
+    "types"
   ],
   "scripts": {
     "start": "webpack serve --mode=development --config ./example/webpack.config.js",
