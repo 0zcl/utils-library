@@ -1,9 +1,12 @@
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const path = require('path')
 
 module.exports = {
   entry: './src/index.ts',
   output: {
+    libraryTarget: 'umd',
+    library: 'utilsLibrary',
     filename: 'utils-library.js',
     path: path.resolve(__dirname, '../dist')
   },
@@ -28,6 +31,7 @@ module.exports = {
     ]
   },
   plugins: [
+    new CleanWebpackPlugin(),
     new ForkTsCheckerWebpackPlugin()
   ]
 }

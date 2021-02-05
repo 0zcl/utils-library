@@ -1,15 +1,23 @@
 {
-  "name": "utils-library",
+  "name": "@i61/utils-library",
   "version": "1.0.0",
   "description": "公共函数库",
   "main": "./dist/utils-library.js",
   "types": "./types/utils-library.d.ts",
+  "files": [
+    "./dist/utils-library.js",
+    "./types/utils-library.d.ts"
+  ],
   "scripts": {
     "start": "webpack serve --mode=development --config ./example/webpack.config.js",
     "build": "webpack --mode=production --config ./build/webpack.config.js",
     "docs": "typedoc",
     "lint": "eslint src/**/* --ext .js,.ts",
-    "test": "jest --coverage"
+    "jest": "jest --coverage",
+    "next": "npm run build && npm set registry http://verdaccio.61info.com && npm version prerelease --preid=next && npm publish --tag=next && git push",
+    "patch": "npm run build && npm set registry http://verdaccio.61info.com && npm version patch && npm publish && git push",
+    "minor": "npm run build && npm set registry http://verdaccio.61info.com && npm version minor && npm publish && git push",
+    "major": "npm run build && npm set registry http://verdaccio.61info.com && npm version major && npm publish && git push"
   },
   "keywords": [
     "TypeScript",
@@ -28,6 +36,7 @@
     "@types/webpack-env": "^1.16.0",
     "@typescript-eslint/eslint-plugin": "^4.11.1",
     "@typescript-eslint/parser": "^4.11.1",
+    "clean-webpack-plugin": "^3.0.0",
     "core-js": "^3.8.2",
     "css-loader": "^5.0.1",
     "eslint": "^7.17.0",
