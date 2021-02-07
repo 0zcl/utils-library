@@ -22,8 +22,9 @@ module.exports = {
           options: {
             // 使用此选项，会关闭类型检查. 缩短使用 ts-loader 时的构建时间.
             transpileOnly: true,
+            configFile: path.resolve(__dirname, '../tsconfig.json')
             // 给.vue文件加上.ts后缀，方便ts-loader处理
-            appendTsSuffixTo: [/\.vue$/]
+            // appendTsSuffixTo: [/\.vue$/]
           }
         }],
         exclude: /node_modules/

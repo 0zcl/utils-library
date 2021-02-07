@@ -14,3 +14,10 @@ function importAll (r: __WebpackModuleApi.RequireContext): void {
 importAll(require.context('./', true, /\.ts$/))
 
 export default cache
+// import setCookie from './browser/setCookie'
+// import hasOwnProp from './object/hasOwnProp'
+
+// export default {
+//   setCookie,
+//   hasOwnProp
+// }
