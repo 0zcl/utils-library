@@ -7,9 +7,11 @@ module.exports = {
   output: {
     libraryTarget: 'umd',
     library: 'utilsLibrary',
+    libraryExport: 'default',
     filename: 'utils-library.js',
     path: path.resolve(__dirname, '../dist')
   },
+  // devtool: 'source-map',
   resolve: {
     extensions: ['.ts', '.tsx']
   },
