@@ -1,5 +1,4 @@
 interface Cache {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [index: string]: any
 }
 const cache: Cache = {} as Cache
@@ -16,10 +15,3 @@ function importAll (r: __WebpackModuleApi.RequireContext): void {
 importAll(require.context('./', true, /\.ts$/))
 
 export default cache
-// import setCookie from './browser/setCookie'
-// import hasOwnProp from './object/hasOwnProp'
-
-// export default {
-//   setCookie,
-//   hasOwnProp
-// }

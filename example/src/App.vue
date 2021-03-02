@@ -4,7 +4,20 @@
   </div>
 </template>
 
-<style>
+<script lang="ts">
+import { Vue, Component, Prop } from 'vue-property-decorator'
+
+@Component
+export default class App extends Vue {
+  data() {
+    return {
+      name: 'zcl'
+    }
+  }
+}
+</script>
+
+<style scoped>
 #app {
   height: 100%;
 }

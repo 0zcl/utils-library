@@ -20,6 +20,6 @@ module.exports = {
     'space-before-function-paren': 'off',
     '@typescript-eslint/no-inferrable-types': 'off', // 禁止对初始化为数字、字符串或布尔值的变量或参数进行显式类型声明
     '@typescript-eslint/no-var-requires': 'off', // var foo = require("foo")禁止使用诸如之类的形式
-    // '@typescript-eslint/no-explicit-any': ['off']
+    '@typescript-eslint/no-explicit-any': ['off']
   }
 }

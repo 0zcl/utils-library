@@ -81,7 +81,7 @@ test('compiling android goes as expected', () => {
 // })
 
 const arr = [1, [2, 3], [4, [5, 6], 7]]
-const flatFn = arr => arr.flat(2)
+const flatFn = (arr: any[]) => arr.flat(2)
 test('flat函数：', () => {
   expect(flatFn(arr)).toStrictEqual([1, 2, 3, 4, 5, 6, 7])
 })
