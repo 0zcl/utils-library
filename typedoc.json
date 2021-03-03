@@ -1,5 +1,4 @@
 {
-  "entryPoints": ["./src/"],
+  "entryPoints": "./src/",
   "exclude": ["./src/index.ts"]
-
 }

@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import App from './App'
+import App from './App.vue'
 import router from './router/index'
 
 // import utilsLibrary from '../../dist/utils-library.js'
@@ -12,6 +12,7 @@ import utilsLibrary from '../../src/index'
 //   },
 //   template: '<h1>Hello {{ name }}</h1>'
 // })
+Vue.prototype.utilsLibrary = utilsLibrary
 
 new Vue({
   router,
@@ -26,3 +27,6 @@ console.log(utilsLibrary.getBrowserInfo())
 utilsLibrary.setCookie('zcl', randomNum)
 console.log(utilsLibrary.getCookie('zcl'))
 console.log(utilsLibrary.hasOwnProp({ 123: 'zcl', a: 1 }, 'zbl'))
+console.log(utilsLibrary.formatPassTime(1614666607019))
+console.log(utilsLibrary.formatTime(1614666607019, 'yyyy.MM.dd.a'))
+console.log(utilsLibrary.parseQueryString())
