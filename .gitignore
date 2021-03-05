@@ -2,7 +2,7 @@
 **/node_modules
 # **/dist
 **/.history
-**/docs
+# **/docs
 coverage
 npm-debug.log*
 yarn-debug.log*
