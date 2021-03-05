@@ -5,14 +5,12 @@
   "description": "公共函数库",
   "author": "zhangChengLiang",
   "main": "./dist/utils-library.js",
-  "types": "./types/utils-library.d.ts",
   "files": [
-    "dist",
-    "types/*.d.ts"
+    "dist"
   ],
   "scripts": {
     "start": "webpack serve --mode=development --config ./example/webpack.config.js",
-    "build": "webpack --mode=production --config ./build/webpack.config.js",
+    "build": "webpack --mode=production --config ./build/webpack.config.js && tsc",
     "docs": "typedoc",
     "lint": "eslint src/**/* --ext .js,.ts",
     "jest": "jest --coverage",
