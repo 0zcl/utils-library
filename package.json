@@ -10,7 +10,7 @@
   ],
   "scripts": {
     "start": "webpack serve --mode=development --config ./example/webpack.config.js",
-    "build": "webpack --mode=production --config ./build/webpack.config.js && tsc",
+    "build": "webpack --mode=production --config ./build/webpack.config.js",
     "docs": "typedoc",
     "lint": "eslint src/**/* --ext .js,.ts",
     "jest": "jest --coverage",
