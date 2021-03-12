@@ -17,12 +17,13 @@ interface Options {
  * @param obj 待过滤的对象
  * @param filterArr 由obj中要过滤的key组成的数组
  * @param options 参数配置，传nullType: null | undefined | '' 默认为空字符''
- * @returns 过滤后的对象
+ * @returns 过滤后的对象. 注：key-value. vulue为0. 过滤后value也为0
  */
 function filterObj(obj: Obj, filterArr: string[], options: Options = { nullType: '' }): Obj {
   const resObj = {} as Obj
   filterArr.forEach(item => {
-    resObj[item] = obj[item] ? obj[item] : options.nullType
+    const filterItem = obj[item]
+    resObj[item] = filterItem === 0 || filterItem ? filterItem : options.nullType
   })
   return resObj
 }
