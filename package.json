@@ -12,7 +12,7 @@
   "scripts": {
     "start": "webpack serve --mode=development --config ./example/webpack.config.js",
     "build:types": "tsc --emitDeclarationOnly",
-    "build": "webpack --mode=production --config ./build/webpack.config.js",
+    "build": "webpack --mode=production --config ./build/webpack.config.js && npm run build:types",
     "docs": "typedoc",
     "lint": "eslint src/**/* --ext .js,.ts",
     "jest": "jest --coverage",
