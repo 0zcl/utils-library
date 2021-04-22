@@ -15,6 +15,13 @@ install:
 
 script:
   - npm run docs
-  - git add docs/
-  - git commit -m 'docs: 更新文档'
-  - git push
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  keep_history: true
+  target-branch: gh-page
+  on:
+    branch: master  # 从 master 分支拉取代码
+
