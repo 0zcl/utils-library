@@ -6,7 +6,7 @@ import router from './router/index'
 import utilsLibrary from '../../src/index'
 
 // new Vue({
-//   el: '.app',
+//   el: '#app',
 //   data: {
 //     name: 'TypeScript && Vue'
 //   },

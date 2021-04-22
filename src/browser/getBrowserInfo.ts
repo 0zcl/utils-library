@@ -17,7 +17,7 @@ interface BrowserInfo {
 
 /**
  * ```typescript
- * utilsLibrary.getBrowserInfo() // {type: "windows"}
+ * utilsLibrary.getBrowserInfo() // {type: "windows"} example: 'ios' | 'android' | 'windowsPhone' | 'MacOSX' | 'windows' | 'linux'
  * ```
  * @desc 获取浏览器类型
  * @return {BrowserInfo} 类型为{ type: 'xxx' }

@@ -3,7 +3,7 @@ interface QueryObj {
 }
 
 /**
- * @description url参数转对象
+ * @description url参数转对象。【url参数会做一次decodeURIComponent】
  * @param {String} url 默认：window.location.href
  * @returns {Object}
  */
