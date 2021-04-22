@@ -14,4 +14,7 @@ install:
   - npm install
 
 script:
-  - npm docs
+  - npm run docs
+  - git add docs/
+  - git commit -m 'docs: 更新文档'
+  - git push
