@@ -19,9 +19,10 @@ script:
 deploy:
   provider: pages
   skip_cleanup: true
-  github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  github_token: $github-token  # Set in the settings page of your repository, as a secure variable
   keep_history: true
-  target-branch: gh-page
+  local_dir: ./docs/
+  target-branch: gh-pages
   on:
     branch: master  # 从 master 分支拉取代码
 

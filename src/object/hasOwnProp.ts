@@ -1,6 +1,6 @@
 interface Obj {
   [key: string]: any
-  hasOwnProperty(key: string | number): boolean
+  // hasOwnProperty(key: string | number): boolean
 }
 
 /**
