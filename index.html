@@ -1,0 +1,186 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>@i61/utils-library</title>
+	<meta name="description" content="Documentation for @i61/utils-library">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+	<script async src="assets/js/search.js" id="search-script"></script>
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">@i61/utils-library</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<h1>@i61/utils-library</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<a href="#待开发：" id="待开发：" style="color: inherit; text-decoration: none;">
+					<h3>待开发：</h3>
+				</a>
+				<ol>
+					<li>src/index.ts 每次加新接口，都import 新接口。解决：自动导入<ul>
+							<li>已解决：通过webpack的api: require.context. 需要先安装声明包：@types/webpack-env</li>
+						</ul>
+					</li>
+					<li>doc说明文档 美化生成？<ul>
+							<li>已解决：typedoc</li>
+						</ul>
+					</li>
+					<li>推包<ul>
+							<li>已解决  output.libraryExport属性。src目录以文件名为函数Key，导出为 value</li>
+						</ul>
+					</li>
+				</ol>
+				<a href="#packagejson脚本" id="packagejson脚本" style="color: inherit; text-decoration: none;">
+					<h3>package.json脚本</h3>
+				</a>
+				<pre><code><span style="color: #000000">  </span><span style="color: #A31515">&quot;scripts&quot;</span><span style="color: #000000">: {</span>
+<span style="color: #000000">    </span><span style="color: #A31515">&quot;start&quot;</span><span style="color: #001080">:</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;webpack serve --mode=development --config ./example/webpack.config.js&quot;</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #A31515">&quot;build&quot;</span><span style="color: #001080">:</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;webpack --mode=production --config ./build/webpack.config.js&quot;</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #A31515">&quot;docs&quot;</span><span style="color: #001080">:</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;typedoc&quot;</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #A31515">&quot;lint&quot;</span><span style="color: #001080">:</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;eslint src/**/* --ext .js,.ts&quot;</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #A31515">&quot;jest&quot;</span><span style="color: #001080">:</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;jest --coverage&quot;</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #A31515">&quot;next&quot;</span><span style="color: #001080">:</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;npm run build &amp;&amp; npm set registry http://verdaccio.61info.com &amp;&amp; npm version prerelease --preid=next &amp;&amp; npm publish --tag=next &amp;&amp; git push&quot;</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #A31515">&quot;patch&quot;</span><span style="color: #001080">:</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;npm run build &amp;&amp; npm set registry http://verdaccio.61info.com &amp;&amp; npm version patch &amp;&amp; npm publish &amp;&amp; git push&quot;</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #A31515">&quot;minor&quot;</span><span style="color: #001080">:</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;npm run build &amp;&amp; npm set registry http://verdaccio.61info.com &amp;&amp; npm version minor &amp;&amp; npm publish &amp;&amp; git push&quot;</span><span style="color: #000000">,</span>
+<span style="color: #000000">    </span><span style="color: #A31515">&quot;major&quot;</span><span style="color: #001080">:</span><span style="color: #000000"> </span><span style="color: #A31515">&quot;npm run build &amp;&amp; npm set registry http://verdaccio.61info.com &amp;&amp; npm version major &amp;&amp; npm publish &amp;&amp; git push&quot;</span>
+<span style="color: #000000">  }</span>
+</code></pre>
+				<ul>
+					<li>npm run start: 启动example目录下的demo项目
+					<img src="./assets/start.png" alt="blockchain"></li>
+					<li>npm run build: 打包src目录。入口是src/index.ts
+					<img src="./assets/build.png" alt="blockchain"></li>
+					<li>npm run docs: 自动生成文档, 目录为docs。配置文件为typedoc.json
+					<img src="./assets/docs.png" alt="blockchain"></li>
+					<li>npm run lint: 代码检查。可检查ts文件。配置文件为.eslintrc.js
+					<img src="./assets/lint.png" alt="blockchain"></li>
+					<li>npm run jest: 测试。配置文件为jest.config.js
+					<img src="./assets/jest.png" alt="blockchain"></li>
+					<li>npm run next: 发布next分支(测试环境用)<ul>
+							<li>npm run patch: 发布子版本</li>
+							<li>npm run minor: 发布次版本号</li>
+							<li>npm run major: 发布主版本号</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class=" ">
+						<a href="modules.html">Exports</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/browser_getbrowserinfo.html">browser/get<wbr>Browser<wbr>Info</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/browser_getcookie.html">browser/get<wbr>Cookie</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/browser_removecookie.html">browser/remove<wbr>Cookie</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/browser_setcookie.html">browser/set<wbr>Cookie</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/function_debounce.html">function/debounce</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/function_equal.html">function/equal</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/function_throttle.html">function/throttle</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/object_filterobj.html">object/filter<wbr>Obj</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/object_hasownprop.html">object/has<wbr>Own<wbr>Prop</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/random_randomcolor.html">random/random<wbr>Color</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/random_randomnum.html">random/random<wbr>Num</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/time_formatpasstime.html">time/format<wbr>Pass<wbr>Time</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/time_formattime.html">time/format<wbr>Time</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/url_parsequerystring.html">url/parse<wbr>Query<wbr>String</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
