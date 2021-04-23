@@ -13,7 +13,7 @@ interface Obj {
   * @return {Boolean}
   */
 function hasOwnProp(obj: Obj, key: string | number): boolean {
-  return obj && obj.hasOwnProperty ? Object.prototype.hasOwnProperty.call(obj, key) : false
+  return typeof obj === 'object' ? Object.prototype.hasOwnProperty.call(obj, key) : false
 }
 
 export default hasOwnProp
