@@ -32,7 +32,6 @@ function formatTime(date: Date | number, fmt: string = 'yyyy-MM-dd'): string {
   }
   return fmt.replace(/(y|M|d|H|m|s|a)+/g, (result: string, key: keyof Format): string => {
     const value: number = formatObj[key]
-    console.log(key, value)
     if (key === 'a' && value !== 0) return ['一', '二', '三', '四', '五', '六'][value - 1]
     if (key === 'a' && value === 0) return ['日'][value]
     return result.length > 0 && value < 10 ? '0' + value : String(value)
