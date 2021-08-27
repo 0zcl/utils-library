@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>object/filterObj | @i61/utils-library</title>
+	<title>src/object/hasOwnProp | @i61/utils-library</title>
 	<meta name="description" content="Documentation for @i61/utils-library">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -55,10 +55,10 @@
 					<a href="../modules.html">@i61/utils-library</a>
 				</li>
 				<li>
-					<a href="object_filterobj.html">object/filterObj</a>
+					<a href="src_object_hasownprop.html">src/object/hasOwnProp</a>
 				</li>
 			</ul>
-			<h1>Module object/filterObj</h1>
+			<h1>Module src/object/hasOwnProp</h1>
 		</div>
 	</div>
 </header>
@@ -72,7 +72,7 @@
 						<section class="tsd-index-section ">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-module"><a href="object_filterobj.html#default" class="tsd-kind-icon">default</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="src_object_hasownprop.html#default" class="tsd-kind-icon">default</a></li>
 							</ul>
 						</section>
 					</div>
@@ -84,23 +84,19 @@
 					<a name="default" class="tsd-anchor"></a>
 					<h3>default</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
-						<li class="tsd-signature tsd-kind-icon">default<span class="tsd-signature-symbol">(</span>obj<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Obj</span>, filterArr<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Options</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Obj</span></li>
+						<li class="tsd-signature tsd-kind-icon">default<span class="tsd-signature-symbol">(</span>obj<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Obj</span>, key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in object/filterObj.ts:22</li>
+									<li>Defined in src/object/hasOwnProp.ts:15</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>判断对象自身属性中是否具有指定的属性</p>
-									<pre><code><span style="color: #001080">utilsLibrary</span><span style="color: #000000">.</span><span style="color: #795E26">filterObj</span><span style="color: #000000">(</span>
-<span style="color: #000000"> { </span><span style="color: #001080">a:</span><span style="color: #000000"> </span><span style="color: #098658">1</span><span style="color: #000000">, </span><span style="color: #001080">b:</span><span style="color: #000000"> </span><span style="color: #098658">2</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;c&#039;</span><span style="color: #001080">:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;c&#039;</span><span style="color: #000000">, </span><span style="color: #001080">d:</span><span style="color: #000000"> {</span><span style="color: #001080">a:</span><span style="color: #000000"> </span><span style="color: #098658">1</span><span style="color: #000000">}, </span><span style="color: #001080">e:</span><span style="color: #000000"> [</span><span style="color: #098658">1</span><span style="color: #000000">,</span><span style="color: #098658">2</span><span style="color: #000000">,</span><span style="color: #098658">3</span><span style="color: #000000">], </span><span style="color: #001080">f:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;f&#039;</span><span style="color: #000000">},</span>
-<span style="color: #000000"> [</span><span style="color: #A31515">&#039;a&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;d&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;e&#039;</span><span style="color: #000000">, </span><span style="color: #A31515">&#039;g&#039;</span><span style="color: #000000">],</span>
-<span style="color: #000000"> { </span><span style="color: #001080">nullType:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;&#039;</span><span style="color: #000000"> }</span>
-<span style="color: #000000">) </span><span style="color: #008000">// { a: 1, d: {a: 1}, e: [1,2,3], g: &#039;&#039;}</span>
+									<pre><code><span style="color: #001080">utilsLibrary</span><span style="color: #000000">.</span><span style="color: #795E26">hasOwnProp</span><span style="color: #000000">({ </span><span style="color: #098658">123</span><span style="color: #001080">:</span><span style="color: #000000"> </span><span style="color: #A31515">&#039;zcl&#039;</span><span style="color: #000000">, </span><span style="color: #001080">a:</span><span style="color: #000000"> </span><span style="color: #098658">1</span><span style="color: #000000"> }, </span><span style="color: #A31515">&#039;zbl&#039;</span><span style="color: #000000">) </span><span style="color: #008000">// false</span>
 </code></pre>
 								</div>
 							</div>
@@ -109,24 +105,17 @@
 								<li>
 									<h5>obj: <span class="tsd-signature-type">Obj</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>待过滤的对象</p>
+										<p>对象</p>
 									</div>
 								</li>
 								<li>
-									<h5>filterArr: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
+									<h5>key: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>由obj中要过滤的key组成的数组</p>
-									</div>
-								</li>
-								<li>
-									<h5>options: <span class="tsd-signature-type">Options</span><span class="tsd-signature-symbol"> = ...</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>参数配置，传nullType: null | undefined | &#39;&#39; 默认为空字符&#39;&#39;</p>
+										<p>键值</p>
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Obj</span></h4>
-							<p>过滤后的对象. 注：key-value. vulue为0. 过滤后value也为0</p>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -136,53 +125,62 @@
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class=" ">
-						<a href="../modules.html">Exports</a>
+						<a href="../modules.html">Modules</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="browser_getbrowserinfo.html">browser/get<wbr>Browser<wbr>Info</a>
+						<a href="src_browser_getbrowserinfo.html">src/browser/get<wbr>Browser<wbr>Info</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="browser_getcookie.html">browser/get<wbr>Cookie</a>
+						<a href="src_browser_getcookie.html">src/browser/get<wbr>Cookie</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="browser_removecookie.html">browser/remove<wbr>Cookie</a>
+						<a href="src_browser_removecookie.html">src/browser/remove<wbr>Cookie</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="browser_setcookie.html">browser/set<wbr>Cookie</a>
+						<a href="src_browser_setcookie.html">src/browser/set<wbr>Cookie</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="function_debounce.html">function/debounce</a>
+						<a href="src_function_debounce.html">src/function/debounce</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="function_throttle.html">function/throttle</a>
+						<a href="src_function_equal.html">src/function/equal</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="src_function_throttle.html">src/function/throttle</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="src_object_filterobj.html">src/object/filter<wbr>Obj</a>
 					</li>
 					<li class="current tsd-kind-module">
-						<a href="object_filterobj.html">object/filter<wbr>Obj</a>
+						<a href="src_object_hasownprop.html">src/object/has<wbr>Own<wbr>Prop</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="object_hasownprop.html">object/has<wbr>Own<wbr>Prop</a>
+						<a href="src_random_randomcolor.html">src/random/random<wbr>Color</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="random_randomcolor.html">random/random<wbr>Color</a>
+						<a href="src_random_randomnum.html">src/random/random<wbr>Num</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="random_randomnum.html">random/random<wbr>Num</a>
+						<a href="src_time_formatpasstime.html">src/time/format<wbr>Pass<wbr>Time</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="time_formatpasstime.html">time/format<wbr>Pass<wbr>Time</a>
+						<a href="src_time_formattime.html">src/time/format<wbr>Time</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="time_formattime.html">time/format<wbr>Time</a>
+						<a href="src_time_intervaltime.html">src/time/interval<wbr>Time</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="url_parsequerystring.html">url/parse<wbr>Query<wbr>String</a>
+						<a href="src_url_parsequerystring.html">src/url/parse<wbr>Query<wbr>String</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="types.html">types</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-function tsd-parent-kind-module">
-						<a href="object_filterobj.html#default" class="tsd-kind-icon">default</a>
+						<a href="src_object_hasownprop.html#default" class="tsd-kind-icon">default</a>
 					</li>
 				</ul>
 			</nav>
@@ -195,6 +193,9 @@
 		<div class="tsd-legend-group">
 			<ul class="tsd-legend">
 				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
 			</ul>
 		</div>
 	</div>

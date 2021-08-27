@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>url/parseQueryString | @i61/utils-library</title>
+	<title>src/random/randomNum | @i61/utils-library</title>
 	<meta name="description" content="Documentation for @i61/utils-library">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -55,10 +55,10 @@
 					<a href="../modules.html">@i61/utils-library</a>
 				</li>
 				<li>
-					<a href="url_parsequerystring.html">url/parseQueryString</a>
+					<a href="src_random_randomnum.html">src/random/randomNum</a>
 				</li>
 			</ul>
-			<h1>Module url/parseQueryString</h1>
+			<h1>Module src/random/randomNum</h1>
 		</div>
 	</div>
 </header>
@@ -72,7 +72,7 @@
 						<section class="tsd-index-section ">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-function tsd-parent-kind-module"><a href="url_parsequerystring.html#default" class="tsd-kind-icon">default</a></li>
+								<li class="tsd-kind-function tsd-parent-kind-module"><a href="src_random_randomnum.html#default" class="tsd-kind-icon">default</a></li>
 							</ul>
 						</section>
 					</div>
@@ -84,32 +84,36 @@
 					<a name="default" class="tsd-anchor"></a>
 					<h3>default</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module">
-						<li class="tsd-signature tsd-kind-icon">default<span class="tsd-signature-symbol">(</span>url<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">QueryObj</span></li>
+						<li class="tsd-signature tsd-kind-icon">default<span class="tsd-signature-symbol">(</span>min<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, max<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in url/parseQueryString.ts:10</li>
+									<li>Defined in src/random/randomNum.ts:10</li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<pre><code><span style="color: #001080">utilsLibrary</span><span style="color: #000000">.</span><span style="color: #795E26">randomNum</span><span style="color: #000000">() </span><span style="color: #008000">// 2</span>
+</code></pre>
+								</div>
 								<dl class="tsd-comment-tags">
-									<dt>description</dt>
-									<dd><p>url参数转对象</p>
+									<dt>desc</dt>
+									<dd><p>生成指定范围[min, max]的随机数</p>
 									</dd>
 								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>url: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> = ...</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>默认：window.location.href</p>
-									</div>
+									<h5>min: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>max: <span class="tsd-signature-type">number</span></h5>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">QueryObj</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -119,53 +123,62 @@
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class=" ">
-						<a href="../modules.html">Exports</a>
+						<a href="../modules.html">Modules</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="browser_getbrowserinfo.html">browser/get<wbr>Browser<wbr>Info</a>
+						<a href="src_browser_getbrowserinfo.html">src/browser/get<wbr>Browser<wbr>Info</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="browser_getcookie.html">browser/get<wbr>Cookie</a>
+						<a href="src_browser_getcookie.html">src/browser/get<wbr>Cookie</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="browser_removecookie.html">browser/remove<wbr>Cookie</a>
+						<a href="src_browser_removecookie.html">src/browser/remove<wbr>Cookie</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="browser_setcookie.html">browser/set<wbr>Cookie</a>
+						<a href="src_browser_setcookie.html">src/browser/set<wbr>Cookie</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="function_debounce.html">function/debounce</a>
+						<a href="src_function_debounce.html">src/function/debounce</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="function_throttle.html">function/throttle</a>
+						<a href="src_function_equal.html">src/function/equal</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="object_filterobj.html">object/filter<wbr>Obj</a>
+						<a href="src_function_throttle.html">src/function/throttle</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="object_hasownprop.html">object/has<wbr>Own<wbr>Prop</a>
+						<a href="src_object_filterobj.html">src/object/filter<wbr>Obj</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="random_randomcolor.html">random/random<wbr>Color</a>
+						<a href="src_object_hasownprop.html">src/object/has<wbr>Own<wbr>Prop</a>
 					</li>
 					<li class=" tsd-kind-module">
-						<a href="random_randomnum.html">random/random<wbr>Num</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="time_formatpasstime.html">time/format<wbr>Pass<wbr>Time</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="time_formattime.html">time/format<wbr>Time</a>
+						<a href="src_random_randomcolor.html">src/random/random<wbr>Color</a>
 					</li>
 					<li class="current tsd-kind-module">
-						<a href="url_parsequerystring.html">url/parse<wbr>Query<wbr>String</a>
+						<a href="src_random_randomnum.html">src/random/random<wbr>Num</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="src_time_formatpasstime.html">src/time/format<wbr>Pass<wbr>Time</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="src_time_formattime.html">src/time/format<wbr>Time</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="src_time_intervaltime.html">src/time/interval<wbr>Time</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="src_url_parsequerystring.html">src/url/parse<wbr>Query<wbr>String</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="types.html">types</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-function tsd-parent-kind-module">
-						<a href="url_parsequerystring.html#default" class="tsd-kind-icon">default</a>
+						<a href="src_random_randomnum.html#default" class="tsd-kind-icon">default</a>
 					</li>
 				</ul>
 			</nav>
@@ -178,6 +191,9 @@
 		<div class="tsd-legend-group">
 			<ul class="tsd-legend">
 				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
 			</ul>
 		</div>
 	</div>
