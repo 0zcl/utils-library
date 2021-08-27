@@ -33,5 +33,7 @@ console.log(utilsLibrary.formatTime(1614666607019, 'yyyy-MM-dd HH:mm:ss'))
 console.log(utilsLibrary.parseQueryString())
 console.log(utilsLibrary.filterObj({ a: 1, b: 2, c: 'c', d: { a: 1 }, e: [1, 2, 3], f: 'f' }, ['a', 'd', 'e', 'g'], { nullType: '' }))
 console.log(utilsLibrary.filterObj({ a: 1, b: 2, c: 'c', d: { a: 1 }, e: [1, 2, 3], f: 'f' }, ['a', 'd', 'e', 'g'], { nullType: undefined }))
-
+console.log(utilsLibrary.intervalTime(1614666607019, 1630056332000))
+console.log(utilsLibrary.intervalTime(1630056332000, new Date()))
+console.log(utilsLibrary.intervalTime(null, new Date()))
 console.log(utilsLibrary.equal(0.1 + 0.2, 0.3))

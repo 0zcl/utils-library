@@ -5,7 +5,7 @@
   "description": "公共函数库",
   "author": "zhangChengLiang",
   "main": "./dist/utils-library.js",
-  "typings": "./dist/",
+  "typings": "./types/index.ts",
   "files": [
     "dist"
   ],

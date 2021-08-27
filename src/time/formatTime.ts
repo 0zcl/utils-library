@@ -1,12 +1,4 @@
-interface Format {
-  y: number,
-  M: number,
-  d: number,
-  H: number,
-  m: number,
-  s: number,
-  a: number
-}
+import { Format } from '../../types'
 /**
  * ```
  * utilsLibrary.formatTime(1614666607019, 'yyyy.MM.dd') // 2021.03.02
