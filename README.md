@@ -10,10 +10,13 @@
 ```
   "scripts": {
     "start": "webpack serve --mode=development --config ./example/webpack.config.js",
-    "build": "webpack --mode=production --config ./build/webpack.config.js",
+    "build:types": "tsc --emitDeclarationOnly",
+    "type-check": "tsc --noEmit",
+    "build": "tsc --noEmit && webpack --mode=production --config ./build/webpack.config.js",
     "docs": "typedoc",
     "lint": "eslint src/**/* --ext .js,.ts",
     "jest": "jest --coverage",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "next": "npm run build && npm set registry http://verdaccio.61info.com && npm version prerelease --preid=next && npm publish --tag=next && git push",
     "patch": "npm run build && npm set registry http://verdaccio.61info.com && npm version patch && npm publish && git push",
     "minor": "npm run build && npm set registry http://verdaccio.61info.com && npm version minor && npm publish && git push",

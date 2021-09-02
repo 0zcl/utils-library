@@ -1,3 +1,4 @@
+import { BrowserInfo } from '../../types'
 
 function getOS() {
   const userAgent: string = ('navigator' in window && 'userAgent' in navigator && navigator.userAgent.toLowerCase()) || ''
@@ -8,11 +9,6 @@ function getOS() {
   if (/mac/i.test(appVersion)) return 'MacOSX'
   if (/win/i.test(appVersion)) return 'windows'
   if (/linux/i.test(appVersion)) return 'linux'
-}
-
-interface BrowserInfo {
-  /** 浏览器类型 */
-  type: 'ios' | 'android' | 'windowsPhone' | 'MacOSX' | 'windows' | 'linux' | undefined
 }
 
 /**

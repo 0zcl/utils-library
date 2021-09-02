@@ -1,7 +1,4 @@
-interface Obj {
-  [key: string]: any
-  // hasOwnProperty(key: string | number): boolean
-}
+import { Obj } from '../../types'
 
 /**
   * 判断对象自身属性中是否具有指定的属性

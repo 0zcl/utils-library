@@ -1,7 +1,5 @@
-interface Cache {
-  [index: string]: any
-}
-const cache: Cache = {} as Cache
+import { Obj } from '../types'
+const cache: Obj = {}
 
 function importAll (r: __WebpackModuleApi.RequireContext): void {
   r.keys().forEach((key: string) => {

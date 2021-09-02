@@ -37,3 +37,10 @@ console.log(utilsLibrary.intervalTime(1614666607019, 1630056332000))
 console.log(utilsLibrary.intervalTime(1630056332000, new Date()))
 console.log(utilsLibrary.intervalTime(null, new Date()))
 console.log(utilsLibrary.equal(0.1 + 0.2, 0.3))
+console.log('getImgSize', utilsLibrary.getImgSize('//media-oss.61info.cn/homework_review/teacher_comment/image/cfd43d53-eb85-4e60-806e-a4ff27bb60b9.png').then(res => {
+  console.log('res', res)
+}))
+utilsLibrary.downloadFunc('{hello: "world"}', 'zcl.txt')
+console.log(utilsLibrary.loadImage('//media-oss.61info.cn/homework_review/teacher_comment/image/cfd43d53-eb85-4e60-806e-a4ff27bb60b9.png').then(res => {
+  console.log('res', res)
+}))

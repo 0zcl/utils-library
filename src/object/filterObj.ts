@@ -1,9 +1,4 @@
-interface Obj {
-  [key: string]: any
-}
-interface Options {
-  nullType?: null | undefined | ''
-}
+import { Options, Obj } from '../../types'
 
 /**
  * 判断对象自身属性中是否具有指定的属性
