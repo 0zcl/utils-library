@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.json",
+  "include": [
+    "types/**/*.ts"
+  ],
+  "compilerOptions": {
+    "noEmit": false,
+    "declaration": true,                   /* Generates corresponding '.d.ts' file. */
+    "emitDeclarationOnly": true,
+    "declarationDir": "./dist/types" // 声明文件打包的位置
+  }
+}

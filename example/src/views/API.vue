@@ -3,7 +3,7 @@
     <div class="aside">
       <div class="header">
         <h1 class="title">
-          <a href="https://github.com/0zcl/utils-library">xe-utils</a>
+          <a href="https://github.com/0zcl/utils-library">utils-library</a>
         </h1>
       </div>
     </div>
