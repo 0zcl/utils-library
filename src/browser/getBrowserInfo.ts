@@ -21,6 +21,7 @@ function getOS() {
 function getBrowserInfo(): BrowserInfo {
   const os: BrowserInfo = {} as BrowserInfo
   os.type = getOS()
+  os.isWeiXin = navigator.userAgent.indexOf('MicroMessenger') > -1
   return os
 }
 

@@ -7,13 +7,13 @@
   "main": "./dist/utils-library.js",
   "typings": "./dist/types/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "types"
   ],
   "scripts": {
     "start": "webpack serve --mode=development --config ./example/webpack.config.js",
-    "build:types": "tsc -p tsconfig.prod.json",
     "type-check": "tsc --noEmit",
-    "build": "tsc --noEmit && webpack --mode=production --config ./build/webpack.config.js && npm run build:types",
+    "build": "tsc --noEmit && webpack --mode=production --config ./build/webpack.config.js",
     "docs": "typedoc",
     "lint": "eslint src/**/* --ext .js,.ts",
     "jest": "jest --coverage",
